@@ -16,7 +16,18 @@ def get_country(ip):
         return x['country']['names']['en'] if x else pd.np.nan
     except KeyError:
         return pd.np.nan
-
+    
+    
+# Add source and destination countries to df.
+# Args: df - Dataframe that contains src_ip and dst_ip.
+# Returns: Extended Dataframe contaning columns for the source and destination countries.
+def add_countries(df):
+    print("This might take a while, please wait...")
+    geo = geolite2.reader()
+    df['src_country'] = df['src_ip'].apply(get_country)
+    df['dst_country'] = df['dst_ip'].apply(get_country)
+    geolite2.close()
+    return df
     
 # Converts integer to its Metric Prefix (MP) representation.
 # Args: num - Integer.
