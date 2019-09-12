@@ -27,4 +27,4 @@ To install Analytics package and its dependencies, run the following command:
 `$ pip install git+https://github.com/cognetive/VPC-Flow-Logs-Analytics.git`
 
 ## Integreation with IBM Watson Studio
-To import Analytics notebook into a Watson Studio project, create a new notebook, select the From URL tab and provide the URL link for the notebook.
+To import Analytics notebook into a Watson Studio project, create a new notebook, select the *From URL* tab and provide the URL link for the notebook.
