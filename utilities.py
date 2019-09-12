@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error, confusion_matrix
 # Finds country by IP address.
 # Args: ip - String represents an IP address.
 # Returns: String represents the corresponding country name.
-def get_country(ip):
+def get_country(ip, geo):
     try:
         x = geo.get(ip)
     except ValueError:
@@ -23,8 +23,8 @@ def get_country(ip):
 def add_countries(df):
     print("This might take a while, please wait...")
     geo = geolite2.reader()
-    df['src_country'] = df['src_ip'].apply(get_country)
-    df['dst_country'] = df['dst_ip'].apply(get_country)
+    df['src_country'] = df['src_ip'].apply(get_country, geo)
+    df['dst_country'] = df['dst_ip'].apply(get_country, geo)
     geolite2.close()
     return df
 
