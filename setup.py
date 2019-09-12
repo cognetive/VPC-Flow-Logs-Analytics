@@ -8,6 +8,6 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='Analytics',
     version='1.0',
-    install_requires=['pyarrow', 'sqlparse', 'ibmcloudsql'],
+    install_requires=['pyarrow', 'sqlparse', 'ibmcloudsql', 'maxminddb-geolite2'],
     py_modules=["utilities"]
 )
