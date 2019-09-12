@@ -1,8 +1,8 @@
 # VPC Flow Logs Analytics
-Analytics project provides a generic tool for analyzing Virtual Private Cloud (VPC) flow logs. 
+Analytics project provides a generic tool for analyzing Virtual Private Cloud (VPC) Flow Logs. 
 
 ## Why Use Analytics?
-* It exploits VPC flow logs structure, gaining deep insights regarding traffic behavior in the cloud.
+* It exploits VPC Flow Logs structure, gaining deep insights regarding traffic behavior in the cloud.
 * It uses state-of-the-art machine learning techniques to find network anomalies.
 * It visualizes the analytics in a comprehensive manner.
 
