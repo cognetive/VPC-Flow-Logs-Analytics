@@ -9,5 +9,6 @@ setup(
     name='Analytics',
     version='1.0',  # Required
     install_requires=['ibmcloudsql'],
+    packages=setuptools.find_packages(),
     py_modules=["Utilities"],
 )
