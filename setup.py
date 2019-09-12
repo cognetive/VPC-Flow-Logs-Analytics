@@ -8,6 +8,6 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='Analytics',
     version='1.0',  # Required
-    setup_requires=['numpy'],
+    setup_requires=['tensorflow'],
     py_modules=["Utilities"],
 )
