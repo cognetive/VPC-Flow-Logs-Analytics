@@ -9,5 +9,5 @@ setup(
     name='Analytics',
     version='1.0',
     install_requires=['pyarrow', 'sqlparse', 'ibmcloudsql'],
-    py_modules=["Utilities"]
+    py_modules=["utilities"]
 )
