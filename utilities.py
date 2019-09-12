@@ -16,8 +16,8 @@ def get_country(ip):
         return x['country']['names']['en'] if x else pd.np.nan
     except KeyError:
         return pd.np.nan
-    
-    
+
+ 
 # Add source and destination countries to df.
 # Args: df - Dataframe that contains src_ip and dst_ip.
 # Returns: Extended Dataframe contaning columns for the source and destination countries.
@@ -28,7 +28,8 @@ def add_countries(df):
     df['dst_country'] = df['dst_ip'].apply(get_country)
     geolite2.close()
     return df
-    
+
+
 # Converts integer to its Metric Prefix (MP) representation.
 # Args: num - Integer.
 # Returns: A string with the corresponding MP representation.
@@ -60,37 +61,6 @@ def date_filter(df, year1, month1, day1, year2, month2, day2):
     return df.loc[mask]
 
 
-## To be removed.
-def get_data(kind):
-    
-    if kind == "Ext_data":
-        return ext_data
-    
-    if kind == "Art_data":
-        return art_df.set_index('Start')[['ABBytes']].resample('0.5Min').sum().fillna(0) 
-    
-    tot_df = flowlogs_df.set_index('Start')[['Total_Packets', 'Total_Bytes']].resample('1H').sum().fillna(0)  
-
-    samples_num = len(tot_df.index)
-    sin_arr1 = [np.sin(2*np.pi*x/24) * 0.1 * np.max(tot_df["Total_Packets"]) for x in range(samples_num)]
-    sin_arr2 = [np.sin(2*np.pi*x/4) * 0.01 * np.max(tot_df["Total_Packets"]) for x in range(samples_num)]
-    tot_df["Noisy_Packets"] = tot_df["Total_Packets"] + sin_arr1 + sin_arr2
-    
-    tot_df["flows"] = flowlogs_df.set_index('Start').resample('1H').size().replace(0, np.nan)
-    tot_df["averageFlowPacket"] = tot_df["Total_Packets"] / tot_df["flows"]
-    tot_df["averageFlowByte"] = tot_df["Total_Bytes"] / tot_df["flows"]
-    tot_df["averagePacketSize"] = tot_df["Total_Bytes"] / tot_df["Total_Packets"]
-    tot_df["flowBehavior"] = tot_df["flows"] / tot_df["averagePacketSize"]
-    tot_df = tot_df.fillna(0)
-
-    if kind == "Total_Packets":
-        return tot_df.loc[:, ["Total_Packets"]]
-    if kind == "Noisy_Packets":
-        return tot_df.loc[:, ["Noisy_Packets"]] 
-    if kind == "Att":
-        return tot_df[["flows", "averageFlowPacket", "averageFlowByte", "averagePacketSize", "flowBehavior"]]
-
-    
 # Smoothes dataframe in a column-wise manner using moving average.
 # Args: df - Dataframe. w - Window size. s - Stride size.  
 # Retruns: Smoothed dataframe.
