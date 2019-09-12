@@ -1,4 +1,3 @@
-
 import pandas as pd, numpy as np, matplotlib.pyplot as plt, networkx as nx, tensorflow as tf, seaborn as sn
 from geolite2 import geolite2
 from scipy import signal
@@ -17,7 +16,7 @@ def get_country(ip):
     except KeyError:
         return pd.np.nan
 
- 
+
 # Add source and destination countries to df.
 # Args: df - Dataframe that contains src_ip and dst_ip.
 # Returns: Extended Dataframe contaning columns for the source and destination countries.
@@ -292,4 +291,3 @@ def FC_autoencoder(train_set, test_set, encoding_len=None, step=0.001, max_epoch
         print("Done. Averaged test loss: %f" % score)
         encoded = np.reshape([x_encoded.eval(feed_dict={x: test_set.iloc[i:i+1]}) for i in range(len(test_set.index))], [len(test_set.index), encoding_len])
     return pd.DataFrame(data=encoded, index=test_set.index)
-
