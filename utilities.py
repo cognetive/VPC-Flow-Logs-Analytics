@@ -23,8 +23,8 @@ def get_country(ip, geo):
 def add_countries(df):
     print("This might take a while, please wait...")
     geo = geolite2.reader()
-    df['src_country'] = df['src_ip'].apply(get_country(geo))
-    df['dst_country'] = df['dst_ip'].apply(get_country(geo))
+    df['src_country'] = df['src_ip'].apply(get_country, geo)
+    df['dst_country'] = df['dst_ip'].apply(get_country, geo)
     geolite2.close()
     return df
 
