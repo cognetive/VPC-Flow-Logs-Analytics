@@ -4,9 +4,8 @@
 # In[ ]:
 
 
-import ibmcloudsql, sqlparse, scipy, matplotlib
+import scipy, matplotlib
 import pandas as pd, numpy as np, matplotlib.pyplot as plt, networkx as nx, tensorflow as tf, seaborn as sn
-
 from geolite2 import geolite2
 from scipy import signal
 from sklearn.metrics import mean_squared_error, confusion_matrix
