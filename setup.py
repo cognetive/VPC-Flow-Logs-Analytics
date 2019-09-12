@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='Analytics',
-    version='1.0',  # Required
-    install_requires=['pyarrow, sqlparse, ibmcloudsql],
-    py_modules=["Utilities"],
+    version='1.0',
+    install_requires=['pyarrow', 'sqlparse', 'ibmcloudsql'],
+    py_modules=["Utilities"]
 )
