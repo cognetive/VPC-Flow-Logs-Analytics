@@ -17,8 +17,8 @@ def get_country(ip, geo):
         return pd.np.nan
 
 
-# Add source and destination countries to df.
-# Args: df - Dataframe that contains src_ip and dst_ip.
+# Add source and destination countries to a Dataframe.
+# Args: df - Dataframe that contains src_ip and dst_ip columns.
 # Returns: Extended Dataframe contaning columns for the source and destination countries.
 def add_countries(df):
     print("This might take a while, please wait...")
