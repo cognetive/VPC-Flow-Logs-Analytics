@@ -6,6 +6,11 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 * It uses state-of-the-art machine learning techniques to find network anomalies.
 * It displays the analytics in a comprehensive manner.
 
+## Prerequisites
+* IPython Notebook with Python 3
+* Pandas, Tensorflow
+* Flow Logs in IBM format (see description below)
+
 ## Install Analytics Package
 To install Analytics package and its dependencies, run the following command:  
 `$ pip install git+https://github.com/cognetive/VPC-Flow-Logs-Analytics.git`
