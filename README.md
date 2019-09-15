@@ -36,4 +36,4 @@ To load data from a local file or from a data asset in Watson Studio:
 2. Click the *Find and Add Data* icon, and then browse a data file or drag it into your notebook sidebar.
 3. Click *Insert to code* link below the file and choose *Insert pandas DataFrame*.
 
-Note: Consider using *data_preparation* module before analyzing your data. Visit the documentation page for further reading. 
+Note: Consider using *data_preparation* module before analyzing your data. Visit the documentation page for further information. 
