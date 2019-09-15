@@ -29,7 +29,6 @@ Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data s
 ## Integration with IBM Watson Studio
 ### Import Analytics Notebook
 To import Analytics notebook into a Watson Studio project, create a new notebook, select the *From URL* tab and provide the URL link for the notebook.
-
 ### Load Data
 #### Option 1 - Local File or Data Asset
 To load data from a local file or from a data asset in Watson Studio: 
