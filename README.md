@@ -29,7 +29,7 @@ Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data s
 - ABBytes
 - BABytes
 
-## Load Data
+## Load Data into a Watson Studio Notebook
 ### Option 1 - Local File or Data Asset
 To load data from a local file or from a data asset in Watson Studio: 
 1. Open an empty code cell in your notebook.
