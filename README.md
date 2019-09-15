@@ -10,9 +10,6 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 To install Analytics package and its dependencies, run the following command:  
 `$ pip install git+https://github.com/cognetive/VPC-Flow-Logs-Analytics.git`
 
-## Integration with IBM Watson Studio
-To import Analytics notebook into a Watson Studio project, create a new notebook, select the *From URL* tab and provide the URL link for the notebook.
-
 ## Data Format
 Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data should be provided as a Pandas Dataframe which contains the following fields (as columns):
 - Start
@@ -29,8 +26,12 @@ Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data s
 - ABBytes
 - BABytes
 
-## Load Data into a Watson Studio Notebook
-### Option 1 - Local File or Data Asset
+## Integration with IBM Watson Studio
+### Import Analytics Notebook
+To import Analytics notebook into a Watson Studio project, create a new notebook, select the *From URL* tab and provide the URL link for the notebook.
+
+### Load Data
+#### Option 1 - Local File or Data Asset
 To load data from a local file or from a data asset in Watson Studio: 
 1. Open an empty code cell in your notebook.
 2. Click the *Find and Add Data* icon, and then browse a data file or drag it into your notebook sidebar.
