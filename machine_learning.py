@@ -6,6 +6,7 @@
 
 import pandas as pd, numpy as np, tensorflow as tf
 from sklearn.metrics import mean_squared_error
+from utilities import conv2d, max_pool, get_variables, build_model
 
 
 # Predicts time-series values using fully-convolutional neural network.
