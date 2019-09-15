@@ -45,5 +45,5 @@ To load data from a bucket in IBM COS, follow these steps:
 1. Run `$ from data_preparation import download_file_cos`.
 2. Go to IBM Cloud and choose *Service credentials* -> *New credential*. provide the reqired name and access role.
 3. After the new credential was generated, click on the *View credentials* tab and copy its content.
-4. Call *download_file_cos*(*credentials*, *bucket*, *file*). Provided by the credentials from step (3), this function loads *file* from *bucket* and returns it as a Pandas Dataframe.  
+4. Call *download_file_cos*(*credentials*, *bucket*, *file*). Provided with the credentials from step (3), this function loads *file* from *bucket* and returns it as a Pandas Dataframe.  
 
