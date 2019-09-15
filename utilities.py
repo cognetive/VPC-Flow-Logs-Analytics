@@ -48,7 +48,7 @@ def number_format(num):
 # Args: x - Signal. W - Convolution kernel. stride - Convolution stride.
 # Returns: Convolution layer.
 def conv2d(x, W, stride=1):
-    return tf.nn.conv2d(x, W, strides=stride, padding='SAME')
+    return tf.nn.conv2d(x, W, strides=[1, 1, stride, 1], padding='SAME')
 
 
 # Caclculates pooling layer.
