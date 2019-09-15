@@ -32,6 +32,6 @@ Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data s
 ## Load Data
 ### Option 1 - Local File or Data Asset
 To load data from a local file or from a data asset in Watson Studio: 
-1. Click in an empty code cell in your notebook.
+1. Open an empty code cell in your notebook.
 2. Click the *Find and Add Data* icon, and then browse a data file or drag it into your notebook sidebar.
 3. Click *Insert to code* link below the file and choose *Insert pandas DataFrame*.
