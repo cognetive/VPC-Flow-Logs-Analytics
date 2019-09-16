@@ -6,11 +6,6 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 * It uses state-of-the-art machine learning techniques to find network anomalies.
 * It displays the analytics in a comprehensive manner.
 
-## Prerequisites
-* IPython Notebook with Python 3
-* Pandas, Tensorflow
-* Flow Logs in IBM format (see description below)
-
 ## Notebooks List
 | Notebook | Action |
 | -------- | ----------- |
@@ -25,6 +20,11 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 | tcp_flows | Compares one-way to two-way TCP connections |
 | top_countries | Displays a table of the top talking countries |
 | top_talking_pairs | Plots a graph of the top talking pairs |
+
+## Prerequisites
+* IPython Notebook with Python 3
+* Pandas, Tensorflow
+* Flow Logs in IBM format (see description below)
 
 ## Install Analytics Package
 To install Analytics package and its dependencies, run the following command:  
