@@ -16,7 +16,7 @@ To install Analytics package and its dependencies, run the following command:
 `$ pip install git+https://github.com/cognetive/VPC-Flow-Logs-Analytics.git`
 
 ## Data Format
-Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data should be provided as a Pandas Dataframe which contains the following fields (as columns):
+Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data should be provided as a Pandas Dataframe named *flowlogs_df*, which contains the following fields (as columns):
 - Start
 - Last
 - Status
