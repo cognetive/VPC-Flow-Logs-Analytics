@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 import pandas as pd, numpy as np, tensorflow as tf
@@ -42,13 +42,13 @@ def cnn_regression(train_set, test_set, train_labels, test_labels, step=0.001, m
                 print("Overfitting, early stopping...")
                 break
             test_loss = new_test_loss
-            for batch in range(int(train_size / batch_size)):
+            for batch in range(int(len(train_set.index) / batch_size)):
                 sess.run(train, feed_dict={x: train_set.iloc[batch*batch_size:batch*batch_size+batch_size], y: train_labels.iloc[batch*batch_size:batch*batch_size+batch_size]})
             if epoch % 10 == 0:
                 print("epoch: %g, train loss: %g" % (epoch, loss.eval(feed_dict={x: train_set, y: train_labels})))
         saver.save(sess, save_path=save_path)
         print("Training finished and saved. Calculating results...")
-        pred = np.reshape([x3.eval(feed_dict={x: test_set.iloc[i:i+1], y: test_labels.iloc[i:i+1]}) for i in range(test_size)], len(test_labels.index))
+        pred = np.reshape(x3.eval(feed_dict={x: test_set, y: test_labels}), len(test_labels.index))
         score = mean_squared_error(pred, np.reshape(test_labels.values, len(test_labels.index)))
         print("Done. Averaged test loss: %f" % score)
     return pred
@@ -85,15 +85,15 @@ def FC_autoencoder(train_set, test_set, encoding_len=None, step=0.001, max_epoch
                 print("Overfitting, early stopping...")
                 break
             test_loss = new_test_loss
-            for batch in range(int(train_size / batch_size)):
+            for batch in range(int(len(train_set.index) / batch_size)):
                 sess.run(train, feed_dict={x: train_set.iloc[batch*batch_size:batch*batch_size+batch_size]})
             if epoch % 10 == 0:
                 print("epoch: %g, train loss: %g" % (epoch, loss.eval(feed_dict={x: train_set})))
         saver.save(sess, save_path=save_path)
         print("Training finished and saved. Calculating results...")
-        pred = [x_decoded.eval(feed_dict={x: test_set.iloc[i:i+1]}) for i in range(len(test_set.index))]
+        pred = x_decoded.eval(feed_dict={x: test_set})
         score = mean_squared_error(np.reshape(pred, [len(test_set.index), sample_len]), np.reshape(test_set.values, [len(test_set.index), sample_len]))
         print("Done. Averaged test loss: %f" % score)
-        encoded = np.reshape([x_encoded.eval(feed_dict={x: test_set.iloc[i:i+1]}) for i in range(len(test_set.index))], [len(test_set.index), encoding_len])
+        encoded = np.reshape(x_encoded.eval(feed_dict={x: test_set}), [len(test_set.index), encoding_len])
     return pd.DataFrame(data=encoded, index=test_set.index)
 
