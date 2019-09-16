@@ -23,6 +23,13 @@ def download_file_cos(credentials, bucket, file):
     return pd.read_csv('tmp.csv')
 
 
+# Extracts and resamples a flowlogs attribute.
+# Args: df - flowlogs dataframe. column - The attribute (column name) to be extracted. sample_rate - The sample rate.
+# Returns - A resampled dataframe consists of one column.
+def time_series_1d(df, column, sample_rate):
+    return df.set_index('Start')[[column]].resample(sample_rate).sum().fillna(0)
+
+
 # Filters according to "Start" column and the given dates.
 # Args: df - Dataframe in flow_logs format. (year1, month1, day1) - Start date. (year2, month2, day2) - end date.
 # Retruns: A filtered dataframe.
