@@ -12,10 +12,10 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 * Flow Logs in IBM format (see description below)
 
 ## Notebooks List
-| Notebook | Description |
+| Notebook | Action |
 | -------- | ----------- |
 | alerts | Alerts on massive traffic to a single destination | 
-| anomalies_cnn | Detects anomalies in 1d time series |
+| anomalies_cnn | Detects anomalies in 1d time series using fully convolutional neural network |
 | avg_packet | Plots a histogram of the average packet size distribution |
 | daily_traffic | Plots a graph of the daily traffic in the network |
 | hotspots | Detects network hotspots |
