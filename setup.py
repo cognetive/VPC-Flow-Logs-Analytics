@@ -9,5 +9,5 @@ setup(
     name='Analytics',
     version='1.0',
     install_requires=['maxminddb-geolite2'],
-    py_modules=["utilities", "data_preparation", "machine_learning", "anomaly_detection"]
+    py_modules=["utilities", "data_preparation", "machine_learning", "anomaly_processing"]
 )
