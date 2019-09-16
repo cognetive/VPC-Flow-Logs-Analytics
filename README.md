@@ -11,6 +11,21 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 * Pandas, Tensorflow
 * Flow Logs in IBM format (see description below)
 
+## Notebooks List
+| Notebook | Description |
+| -------- | ----------- |
+| alerts | Alerts on massive traffic to a single destination | 
+| anomalies_cnn | Detects anomalies in 1d time series |
+| avg_packet | Plots a histogram of the average packet size distribution |
+| daily_traffic | Plots a graph of the daily traffic in the network |
+| hotspots | Detects network hotspots |
+| in_out | Compares inbound to outbound traffic of an instance |
+| port_distibution | Plots a chart of the distribution of the ports used in the network | 
+| rejection_rate | Displays the rejection rate of an instance |
+| tcp_flows | Compares one-way to two-way TCP connections |
+| top_countries | Displays a table of the top talking countries |
+| top_talking_pairs | Plots a graph of the top talking pairs |
+
 ## Install Analytics Package
 To install Analytics package and its dependencies, run the following command:  
 `$ pip install git+https://github.com/cognetive/VPC-Flow-Logs-Analytics.git`
