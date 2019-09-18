@@ -12,6 +12,7 @@ First we set the metric in which we look for anomalies and the aggregation inter
 
 ![alt text](images/metric_agg.png)  
 
-Now we call *time_series_1d* which extracts the relevant column and resamples it:  
+Now we call *time_series_1d()* which extracts the relevant column and resamples it:  
 
 ![alt text](images/time_series_1d.png)  
+
