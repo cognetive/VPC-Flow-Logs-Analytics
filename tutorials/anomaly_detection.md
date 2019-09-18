@@ -55,8 +55,6 @@ We can execute the whole process by running the last cell of this notebook:
 
 ![alt text](images/visualization.png)
 
-<br/>
-
 Nice! As we could expect, the large splikes are spotted as anomalies. We can decide when a score is high enough to be considered as anomalous, by passing an explicit threshold to find_anomalies(). For example, let's set **threshold = &mu;+8&sigma;**:
 
 ![alt text](images/visualization_2.png)
