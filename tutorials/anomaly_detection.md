@@ -28,15 +28,15 @@ We can verify that our data is properly standardized and shingled:
 <br/>
 
 * Great! Our data is ready for the learning task. Now we can run our CNN predictor, providing it the learning duration:
+
 ![alt text](images/epochs.png)  
-<br/>
+
 ![alt text](images/learning_1.png)  
-<br/>
-<br/>
 
 * Note that we got a test error of 1.06. We can try to improve it by extending the learning phase; We pass *is_initial=False* to continue the learning from the stopping point:
+
 ![alt text](images/learning_2.png)  
-<br/>
+
 <br/>
 
 * Indeed, we got a better error now. We are ready to visualize the anomalies!  
@@ -44,13 +44,15 @@ First, we set an *anomaly_score* for each time by calculating the distance betwe
 Next, we find extremely-high scores by passing the anomaly scores to *find_anomalies()*.   
 Last, we plot the results by calling to *anomaly_visualization()* (Anomalies will be marked by red).  
 We can execute the whole process by running the last cell of this notebook:
+
 ![alt text](images/visualization.png)
-<br/>
+
 <br/>
 
 * Nice! As we could expect, the large splikes are spotted as anomalies. We can decide when a score is high enough to be considered as anomalous, by passing an explicit threshold to *find_anomalies()*. For example, lets increase the threshold to be *AVG + 8xSTD*:
+
 ![alt text](images/visualization_2.png)
-<br/>
+
 <br/>
 
 * Thats it! In this tutorial we learned how to use Analytics module for anomaly detection in 1d time-series. Wish you find it useful!
