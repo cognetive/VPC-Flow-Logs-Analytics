@@ -27,4 +27,22 @@ And now prepare the data for prediction by simply running the corresponding cell
 
 We can verify that our data is properly standardized and shingled:
 
-![alt text](images/shingle_verify.png)
+![alt text](images/shingle_verify.png)  
+
+Great! Our data is ready for the learning task. 
+Now we define the learning duration:
+
+![alt text](images/epochs.png)  
+
+And run our CNN predictor by simply running the corresponding cell: 
+
+![alt text](images/learning_1.png)  
+
+Note that we got a test error of 0.5. We can try to improve the results by extending the learning phase; We pass *is_initial=False* to continue the learning from the same point:
+
+![alt text](images/learning_2.png)  
+
+Indeed, we got a better error now. We are ready to visualize the anomalies!
+First, we set an *anomaly_score* for each time by calculating the absolute distance between the prediction and the real value. Next, we find extremely-high scores by passing them to *find_anomalies()*. Last, we plot the whole time series, marking the anomalies by red, by calling to *anomaly_visualization()*. We can execute the whole process by running the last cell of this notebook:
+
+![alt text](images/visualization.png) 
