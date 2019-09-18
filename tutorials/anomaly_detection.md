@@ -1,14 +1,15 @@
-## Anomaly Detection 
+# Anomaly Detection 
 This tutorial demonstrates how to use Analytics to find anomalies in VPC Flow Logs.   
 If you are still not familiar with Analytics, consider starting with the *hello world* tutorial.
 
-### Preparing the Environment
+## Preparing the Environment
 1. Load *anomalies_cnn* into an IPython notebook running with Python 3.
 2. Install Analytics (if needed).
 3. Load the data into a Pandas DataFrame named *flowlogs_df*.
 
-### Let's Start
-* First we need to extract and aggregate the specific metric (column) in which we look for anomalies:
+## Let's Start
+### Select the Data
+First we need to extract and aggregate the specific metric (column) in which we look for anomalies:
 
 ![alt text](images/metric_agg.png)
 
@@ -16,7 +17,8 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 
 <br/>
 
-* Our raw data is ready. But before feeding the time-series predictor, we should split the data into train and test set; After that we can standardize and shingle each set:
+### Preprocessing
+Our raw data is ready. But before feeding the time-series predictor, we should split the data into train and test set; After that we can standardize and shingle each set:
 
 ![alt text](images/split_shingle.png)  
 
@@ -27,7 +29,8 @@ We can verify that our data is properly standardized and shingled:
 
 <br/>
 
-* Great! Our data is ready for the learning task. Now we can run our CNN predictor, providing it the learning duration:
+### Learning and Predicting
+Great! Our data is ready for the learning task. Now we can run our CNN predictor, providing it the learning duration:
 
 ![alt text](images/epochs.png)  
 
@@ -39,7 +42,8 @@ Note that we got a test error of 1.06. We can try to improve it by extending the
 
 <br/>
 
-* Indeed, we got a better error now. We are ready to visualize the anomalies!  
+### Visualize the Results
+Indeed, we got a better error now. We are ready to visualize the anomalies!  
 First, we set an *anomaly_score* for each time by calculating the distance between the predicted and the real values.   
 Next, we find extremely-high scores by passing the anomaly scores to *find_anomalies()*.   
 Last, we plot the results by calling to *anomaly_visualization()* (Anomalies will be marked by red).  
@@ -54,5 +58,6 @@ Nice! As we could expect, the large splikes are spotted as anomalies. We can dec
 ![alt text](images/visualization_2.png)
 
 <br/>
+<br/>
 
-* Thats it! In this tutorial we learned how to use Analytics module for anomaly detection in 1d time-series. Wish you find it useful!
+Thats it! In this tutorial we learned how to use Analytics module for anomaly detection in 1d time-series. Wish you find it useful!
