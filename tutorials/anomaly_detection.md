@@ -49,7 +49,7 @@ We can execute the whole process by running the last cell of this notebook:
 
 <br/>
 
-* Nice! As we could expect, the large splikes are spotted as anomalies. We can decide when a score is high enough to be considered as anomalous, by passing an explicit threshold to *find_anomalies()*. For example, lets increase the threshold to be *AVG + 8xSTD*:
+Nice! As we could expect, the large splikes are spotted as anomalies. We can decide when a score is high enough to be considered as anomalous, by passing an explicit threshold to *find_anomalies()*. For example, lets increase the threshold to be *AVG + 8xSTD*:
 
 ![alt text](images/visualization_2.png)
 
