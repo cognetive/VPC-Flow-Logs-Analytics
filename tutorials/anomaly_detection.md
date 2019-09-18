@@ -9,8 +9,9 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 
 ### Let's Start
 * First we need to extract and aggregate the specific metric (column) in which we look for anomalies:  
-![alt text](images/metric_agg.png)  
-<br/> 
+<br/>
+![alt text](images/metric_agg.png)   
+<br/>
 ![alt text](images/time_series_1d.png)  
 <br/>
 <br/>
