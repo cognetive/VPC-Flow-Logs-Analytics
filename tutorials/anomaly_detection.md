@@ -62,4 +62,4 @@ Nice! As we could expect, the large splikes are spotted as anomalies. We can dec
 <br/>
 <br/>
 
-Thats it! In this tutorial we learned how to use Analytics module for anomaly detection in 1d time-series. More information regarding this module capabilities can be found in the project's documentation. Hope you find this tutorial useful!
+That's it! In this tutorial we learned how to use Analytics module for anomaly detection in 1d time-series. More information regarding this module capabilities can be found in the project's documentation. Hope you find this tutorial useful!
