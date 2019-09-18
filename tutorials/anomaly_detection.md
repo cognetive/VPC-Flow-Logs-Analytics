@@ -38,7 +38,7 @@ Now we can run our CNN predictor, provided with the data and the desired learnin
 
 ![alt text](images/learning_1.png)  
 
-Note that we got a test error of 1.06. We can try to improve it by extending the learning phase; We pass **is_initial=False** to continue the learning from the stopping point:
+Note that we got a test error of 1.06. We can try to improve that by extending the learning phase; We pass **is_initial=False** to continue the learning from the stopping point:
 
 ![alt text](images/learning_2.png)  
 
