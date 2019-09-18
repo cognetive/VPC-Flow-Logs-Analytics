@@ -37,7 +37,7 @@ Now we define the learning duration:
 
 ![alt text](images/learning_1.png)  
 
-* Note that we got a test error of 1.06. We can try to improve the results by extending the learning phase; We pass *is_initial=False* to continue the learning from the same point:
+* Note that we got a test error of 1.06. We can try to improve the results by extending the learning phase; We pass *is_initial=False* to continue the learning from the stopping point:
 
 ![alt text](images/learning_2.png)  
 
