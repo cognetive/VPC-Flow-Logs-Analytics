@@ -45,4 +45,8 @@ Note that we got a test error of 0.5. We can try to improve the results by exten
 Indeed, we got a better error now. We are ready to visualize the anomalies!
 First, we set an *anomaly_score* for each time by calculating the absolute distance between the prediction and the real value. Next, we find extremely-high scores by passing them to *find_anomalies()*. Last, we plot the whole time series, marking the anomalies by red, by calling to *anomaly_visualization()*. We can execute the whole process by running the last cell of this notebook:
 
-![alt text](images/visualization.png) 
+![alt text](images/visualization.png)
+
+We can refine the threshold that determines where anomalies occures by passing an explicit threshold to *find_anomalies*. For example, the following defines a threshold which is equal to *AVG + 8xSTD*:
+
+![alt text](images/visualization_2.png)
