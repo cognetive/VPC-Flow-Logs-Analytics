@@ -47,6 +47,6 @@ First, we set an *anomaly_score* for each time by calculating the absolute dista
 
 ![alt text](images/visualization.png)
 
-We can refine the threshold that determines where anomalies occures by passing an explicit threshold to *find_anomalies*. For example, the following defines a threshold which is equal to *AVG + 8xSTD*:
+We can refine the threshold that determines when anomalies occur. For example, here we set the threshold to be *AVG + 8xSTD*:
 
 ![alt text](images/visualization_2.png)
