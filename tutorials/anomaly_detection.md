@@ -50,7 +50,7 @@ Indeed, we got a better error now. We are ready to visualize the anomalies!
 
 First, we set an *anomaly score* for each time by calculating the distance between the predicted and the real values.   
 Next, we find extremely-high scores by passing the anomaly scores to **find_anomalies()**.   
-Last, we plot the results by calling to **anomaly_visualization()** (Anomalies will be marked by *red*).  
+Last, we plot the results by calling to **anomaly_visualization()** (anomalies will be marked by *red*).  
 We can execute the whole process by running the last cell of this notebook:
 
 ![alt text](images/visualization.png)
