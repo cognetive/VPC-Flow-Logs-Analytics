@@ -27,10 +27,12 @@ Our raw data is ready. But before feeding the time-series predictor, we should s
 We can verify that our data is properly standardized and shingled:
 ![alt text](images/shingle_verify.png)  
 
+Great! Our data is ready for the learning task.
+
 <br/>
 
 ### Learning and Predicting
-Great! Our data is ready for the learning task. Now we can run our CNN predictor, provided with the learning duration:
+Now we can run our CNN predictor, provided with the learning duration:
 
 ![alt text](images/epochs.png)  
 
