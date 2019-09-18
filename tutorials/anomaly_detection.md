@@ -16,3 +16,11 @@ Now we call *time_series_1d()* which extracts the relevant column and resamples 
 
 ![alt text](images/time_series_1d.png)  
 
+OK, our raw data is ready. But feeding the time-series predictor, we should split the data into train and test set; After that we standardize each set and shingle it.  
+First set the relevant hyper-parameters:
+
+![alt text](images/split_shingle.png)  
+
+And now prepare the data for prediction:
+
+![alt text](images/prepare_data.png)
