@@ -42,14 +42,14 @@ Now we define the learning duration:
 ![alt text](images/learning_2.png)  
 
 * Indeed, we got a better error now. We are ready to visualize the anomalies!  
-First, we set an *anomaly_score* for each time by calculating the absolute distance between the prediction and the real value.   
-Next, we find extremely-high scores by passing them to *find_anomalies()*.   
-Last, we plot the whole time series, marking the anomalies by red, by calling to *anomaly_visualization()*.  
+First, we set an *anomaly_score* for each time by calculating the distance between the prediction and the real value.   
+Next, we find extremely-high scores by passing the anomaly scores to *find_anomalies()*.   
+Last, we plot the results by calling to *anomaly_visualization()* (Anomalies will be marked by red).  
 We can execute the whole process by running the last cell of this notebook:
 
 ![alt text](images/visualization.png)
 
-* We can decide when a score is anomalous by passing an explicit threshold to *find_anomalies()*. For example, here we set the threshold to be *AVG + 8xSTD*:
+* Nice! As we could expect, the large splikes are spotted as anomalies. We can decide when a score is anomalous by passing an explicit threshold to *find_anomalies()*. For example, lets increase the threshold to be *AVG + 8xSTD*:
 
 ![alt text](images/visualization_2.png)
 
