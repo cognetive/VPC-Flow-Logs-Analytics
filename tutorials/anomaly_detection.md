@@ -7,7 +7,7 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 2. Install Analytics (if needed).
 3. Load the data into a Pandas DataFrame named *flowlogs_df*.
 
-## Let's Start
+## Let's Get Started
 ### Select the Data
 First we need to extract and aggregate the specific metric (column) in which we look for anomalies:
 
