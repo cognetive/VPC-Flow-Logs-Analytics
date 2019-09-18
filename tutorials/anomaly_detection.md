@@ -8,12 +8,11 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 3. Load the data into a Pandas DataFrame named *flowlogs_df*.
 
 ### Let's Start
-* First we need to extract and aggregate the specific metric (column) in which we look for anomalies:  
-<br/>
-![alt text](images/metric_agg.png)   
-<br/>
+* First we need to extract and aggregate the specific metric (column) in which we look for anomalies:
+![alt text](images/metric_agg.png)
+
 ![alt text](images/time_series_1d.png)  
-<br/>
+
 <br/>
 
 * Our raw data is ready. But before feeding the time-series predictor, we should split the data into train and test set; After that we can standardize and shingle each set:
