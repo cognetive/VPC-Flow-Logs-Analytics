@@ -41,7 +41,7 @@ Now we define the learning duration:
 
 ![alt text](images/learning_2.png)  
 
-* Indeed, we got a better error now. We are ready to visualize the anomalies!
+* Indeed, we got a better error now. We are ready to visualize the anomalies!  
 First, we set an *anomaly_score* for each time by calculating the absolute distance between the prediction and the real value.   
 Next, we find extremely-high scores by passing them to *find_anomalies()*.   
 Last, we plot the whole time series, marking the anomalies by red, by calling to *anomaly_visualization()*.  
