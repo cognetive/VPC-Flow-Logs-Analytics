@@ -8,7 +8,7 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 3. Load the data into a Pandas DataFrame named *flowlogs_df*.
 
 ## Let's Get Started
-### Select the Data
+### Selecting the Data
 First we need to extract and aggregate the specific metric (column) in which we look for anomalies:
 
 ![alt text](images/metric_agg.png)
@@ -46,7 +46,7 @@ Indeed, we got a better error now. We are ready to visualize the anomalies!
 
 <br/>
 
-### Visualize the Results
+### Visualizing the Results
 
 First, we set an *anomaly_score* for each time by calculating the distance between the predicted and the real values.   
 Next, we find extremely-high scores by passing the anomaly scores to *find_anomalies()*.   
