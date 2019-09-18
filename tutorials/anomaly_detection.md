@@ -32,7 +32,7 @@ Great! Our data is ready for the learning task.
 <br/>
 
 ### Learning and Predicting
-Now we can run our CNN predictor, provided with the desired learning duration:
+Now we can run our CNN predictor, provided with the data and the desired learning duration:
 
 ![alt text](images/epochs.png)  
 
