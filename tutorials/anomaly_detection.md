@@ -5,7 +5,8 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 ## Preparing the Environment
 1. Load *anomalies_cnn* into an IPython notebook running with Python 3.
 2. Install *Analytics* (if needed).
-3. Load the data into a Pandas DataFrame named *flowlogs_df*.
+3. Download *data_example.csv* from *VPC-Flow-Logs-Analytics/tutorials*.
+3. Upload the data into your notebook as a Pandas DataFrame named *flowlogs_df*.
 
 ## Let's Get Started
 ### Selecting the Data
