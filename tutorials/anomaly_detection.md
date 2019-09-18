@@ -9,6 +9,7 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 
 ### Let's Start
 * First we need to extract and aggregate the specific metric (column) in which we look for anomalies:
+
 ![alt text](images/metric_agg.png)
 
 ![alt text](images/time_series_1d.png)  
@@ -16,13 +17,14 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 <br/>
 
 * Our raw data is ready. But before feeding the time-series predictor, we should split the data into train and test set; After that we can standardize and shingle each set:
+
 ![alt text](images/split_shingle.png)  
-<br/>
+
 ![alt text](images/prepare_data.png)
-<br/>
+
 We can verify that our data is properly standardized and shingled:
 ![alt text](images/shingle_verify.png)  
-<br/>
+
 <br/>
 
 * Great! Our data is ready for the learning task. Now we can run our CNN predictor, providing it the learning duration:
