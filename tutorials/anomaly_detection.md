@@ -24,3 +24,7 @@ First set the relevant hyper-parameters:
 And now prepare the data for prediction:
 
 ![alt text](images/prepare_data.png)
+
+We can now verify that our data is properly standardized and shingled:
+
+![alt text](images/shingle_verify.png)
