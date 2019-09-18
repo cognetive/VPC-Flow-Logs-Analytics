@@ -40,10 +40,12 @@ Note that we got a test error of 1.06. We can try to improve it by extending the
 
 ![alt text](images/learning_2.png)  
 
+Indeed, we got a better error now. We are ready to visualize the anomalies!  
+
 <br/>
 
 ### Visualize the Results
-Indeed, we got a better error now. We are ready to visualize the anomalies!  
+
 First, we set an *anomaly_score* for each time by calculating the distance between the predicted and the real values.   
 Next, we find extremely-high scores by passing the anomaly scores to *find_anomalies()*.   
 Last, we plot the results by calling to *anomaly_visualization()* (Anomalies will be marked by red).  
