@@ -3,9 +3,9 @@ This tutorial demonstrates how to use Analytics to find anomalies in VPC Flow Lo
 If you are still not familiar with Analytics, consider starting with the *hello world* tutorial.
 
 ## Preparing the Environment
-1. Load **anomalies_cnn** into an IPython notebook running with Python 3.
-2. Install **Analytics** (if needed).
-3. Load the data into a Pandas DataFrame named **flowlogs_df**.
+1. Load *anomalies_cnn* into an IPython notebook running with Python 3.
+2. Install *Analytics* (if needed).
+3. Load the data into a Pandas DataFrame named *flowlogs_df*.
 
 ## Let's Get Started
 ### Selecting the Data
@@ -48,7 +48,7 @@ Indeed, we got a better error now. We are ready to visualize the anomalies!
 
 ### Visualizing the Results
 
-First, we set an **anomaly score** for each time by calculating the distance between the predicted and the real values.   
+First, we set an *anomaly score* for each time by calculating the distance between the predicted and the real values.   
 Next, we find extremely-high scores by passing the anomaly scores to **find_anomalies()**.   
 Last, we plot the results by calling to **anomaly_visualization()** (Anomalies will be marked by *red*).  
 We can execute the whole process by running the last cell of this notebook:
