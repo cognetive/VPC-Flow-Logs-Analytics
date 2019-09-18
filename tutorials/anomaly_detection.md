@@ -9,4 +9,6 @@ If you are still not familiar with Analytics, consider starting with the *hello 
 
 ### Let's Start
 First we set the metric in which we look for anomalies and the aggregation interval length:  
-![alt text](images/metric_agg.png)
+![alt text](images/metric_agg.png)  
+Now we call *time_series_1d* which extracts the relevant column and resamples it:  
+![alt text](images/time_series_1d.png)  
