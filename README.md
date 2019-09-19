@@ -23,7 +23,6 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 
 ## Prerequisites
 * IPython Notebook with Python 3
-* Pandas, Tensorflow
 * Flow Logs in [IBM format](data/format.md)
 
 ## Install Analytics Package
