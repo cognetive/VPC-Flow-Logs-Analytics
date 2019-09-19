@@ -16,10 +16,12 @@ First we need to extract and aggregate the specific metric (column) in which we 
 
 ![alt text](images/time_series_1d.png)  
 
+Our raw data is ready.
+
 <br/>
 
 ### Preprocessing
-Our raw data is ready. But before feeding the time-series predictor, we should split the data into train and test set; After that we can standardize and shingle each set:
+Before feeding the time-series predictor, we should split the data into train and test set; After that we can standardize and shingle each set:
 
 ![alt text](images/split_shingle.png)  
 
