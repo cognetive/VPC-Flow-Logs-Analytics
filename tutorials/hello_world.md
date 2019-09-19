@@ -10,5 +10,5 @@ This tutorial describes how to install, import and use a simple Analytics notebo
 
 ![alt text](images/traffic.png)
 
-Congratulations! :sparkles: 
+Congratulations! :sparkles:  
 The first tutorial is done. Now we are ready to perform some analytics! 
