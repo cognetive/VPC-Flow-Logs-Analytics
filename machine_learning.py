@@ -91,9 +91,9 @@ def FC_autoencoder(train_set, test_set, encoding_len=None, step=0.001, max_epoch
                 print("epoch: %g, train loss: %g" % (epoch, loss.eval(feed_dict={x: train_set})))
         saver.save(sess, save_path=save_path)
         print("Training finished and saved. Calculating results...")
-        pred = x_decoded.eval(feed_dict={x: test_set})
-        score = mean_squared_error(np.reshape(pred, [len(test_set.index), sample_len]), np.reshape(test_set.values, [len(test_set.index), sample_len]))
+        pred = np.reshape(x_decoded.eval(feed_dict={x: test_set}), [len(test_set.index), sample_len])
+        score = mean_squared_error(pred, np.reshape(test_set.values, [len(test_set.index), sample_len]))
         print("Done. Averaged test loss: %f" % score)
         encoded = np.reshape(x_encoded.eval(feed_dict={x: test_set}), [len(test_set.index), encoding_len])
-    return pd.DataFrame(data=encoded, index=test_set.index)
+    return pd.DataFrame(data=encoded, index=test_set.index), pd.DataFrame(data=pred, index=test_set.index)
 
