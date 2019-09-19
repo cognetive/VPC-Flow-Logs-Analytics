@@ -1,4 +1,4 @@
-﻿,UUID,Status,Version,Start,Last,src_ip,src_port,dst_ip,dst_port,Protocol,ABBytes,BABytes,ABPackets,BAPackets,Action,Total_Packets,Total_Bytes
+,UUID,Status,Version,Start,Last,src_ip,src_port,dst_ip,dst_port,Protocol,ABBytes,BABytes,ABPackets,BAPackets,Action,Total_Packets,Total_Bytes
 0,5d095ce8-4545-4d64-a35c-515d0597b628,ENDED,4.2,02/07/2019 17:05,02/07/2019 17:05,10.132.196.39,1602,10.2.163.108,80,TCP,12000000,12000000,7937,7937,ACCEPTED,15874,24000000
 1,b1694e21-8268-4564-aadf-b06f9bfccfa9,ENDED,4.2,02/07/2019 17:06,02/07/2019 17:06,54.210.206.49,2352,10.2.163.104,80,TCP,4720,4720,4,4,ACCEPTED,8,9440
 2,ebb7eb4f-612b-4cb0-863c-e2df3863b497,ENDED,4.2,02/07/2019 17:15,02/07/2019 17:15,54.210.144.91,2352,10.2.163.106,80,TCP,7584,7584,6,6,ACCEPTED,12,15168
