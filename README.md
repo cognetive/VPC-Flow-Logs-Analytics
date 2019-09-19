@@ -11,6 +11,7 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 | -------- | ----------- |
 | alerts | Alerts on massive traffic to a single destination | 
 | anomalies_cnn | Detects anomalies in 1d time series using fully convolutional neural network |
+| anomalies_ae | Detects anomalies in multi dimensional signal using autoencoder |
 | avg_packet | Plots a histogram of the average packet size distribution |
 | daily_traffic | Plots a graph of the daily traffic in the network |
 | hotspots | Detects network hotspots |
