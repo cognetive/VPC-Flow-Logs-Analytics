@@ -5,8 +5,8 @@ This network is designed to detect *contextual anomalies* in 1d time series. Giv
 the network tries to predict the next value. Anomalies can be defined as the values which the network fails to predict.
 
 #### Structure
-This model is implemented by a (potentially deep) neural network, which consists of 4 layers: Input, output, a convolution layer 
-and a fully-connected layer. The convolution is performed in the temporal axis, relying on the existence of temporal patterns
+This model is implemented by a (potentially deep) neural network, which consists of 4 main layers: Input, output, a convolution layer 
+and a fully-connected layer. The CONV layer is down-sampled by a Max Pooling operation; The output of both Conv and FC layers is transformed by an activation function. The convolution is performed in the temporal axis, relying on the existence of temporal patterns
 in the input. 
 
 <p align="center">
