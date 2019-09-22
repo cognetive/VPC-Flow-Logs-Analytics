@@ -12,10 +12,11 @@ in the input.
 <img src="images/structure.png" alt="alt text" width="300" height="300">  
 
 #### How to Use
-1. Use *shingle()* to create the data set and the labels set. Each data point consists of k-consequtive values of the time series,
-and each label is the next value of the time series.
-2. Split each set into train and test sets, and feed the network.
-3. Assign an anomaly score for each instance (the distance between the predicted and the real values, calculated by some metric).
+
+1. <img align="right" img src="images/shingle.png" alt="alt text" width="150" height="150">  Use *shingle()* to create the data set and the labels set. Each data point consists of k-consequtive values of the time series,
+and each label is the next value of the time series.  
+2. Split each set into train and test sets, and feed the network.  
+3. Assign an anomaly score for each instance (the distance between the predicted and the real values, calculated by some metric).  
 4. Define the instances that received the highest scores as anomalous.
 
 ### Advanced Features of Machine Learning Module
