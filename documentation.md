@@ -12,3 +12,10 @@ and each label is the next value of the time series.
 2. Split each set into train and test sets, and feed the network.
 3. Asign anomaly score for each instance (the distance between the predicted and the real values, according to some metric).
 4. Define the instances that received the highest scores as anomalous.
+
+### Mechanisms Provided by Anomaly Detection Module
+Both FCN and AE are implemented in Tensorflow, providing the developer full control over the network structure. 
+Inspired by higher-level modules such as Keras, the following mechanisms are embedded in Analytics Machine Learning functions:
+* Continous Learning. Both models are designed to deal with continous tasks, in which the network might be trained multiple times
+with different data sets. By passing *is_initial=False*, the previous Tensorflow graph is being resotred, allowing the training phase
+to resume from the point it stopped.
