@@ -21,5 +21,5 @@ Inspired by higher-level modules such as Keras, the following features are embed
 with different data sets. By passing *is_initial=False*, the previous Tensorflow graph is being resotred, allowing the training phase
 to resume from the point it stopped.
 * Overfitting Avoidance. This feature can be achieved by using one (or more) of the following mechanisms:
-1. Early Stopping - Stops the training phase when the test error increases in k-consecutive epochs (k is defined by *tolerance*).
-2. Regularization - Limits the size of the network weights by adding a regularization term to the objective (defined by *reg_coeff*).
+  1. Early Stopping - Stops the training phase when the test error increases in k-consecutive epochs (k is defined by *tolerance*).
+  2. Regularization - Limits the size of the network weights by adding a regularization term to the objective (defined by *reg_coeff*).
