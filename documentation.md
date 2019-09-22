@@ -9,7 +9,9 @@ This model is implemented by a (potentially deep) neural network, which consists
 and a fully-connected layer. The convolution is performed in the temporal axis, relying on the existence of temporal patterns
 in the input. 
 
-<img src="images/structure.png" alt="alt text" width="300" height="300">  
+<p align="center">
+  <img width="300" height="300" src="images/structure.png"
+</p> 
 
 #### How to Use
 
