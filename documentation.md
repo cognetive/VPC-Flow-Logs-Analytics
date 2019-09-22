@@ -4,7 +4,7 @@ This module provides two models to detect anomalies in flow logs, both are based
 This network is designed to detect *contextual anomalies* in 1d time series. Given k-consequtive values of a time series,
 the network tries to predict the next value. Anomalies can be defined as the values which the network fails to predict.
 
-<img align="right" img src="images/structure.png" alt="alt text" width="400" height="300">
+<img align="right" img src="images/structure.png" alt="alt text" width="300" height="200">
 
 #### Structure
 This model is implemented by a (potentially deep) neural network, which consists of 4 layers: Input, output, a convolution layer 
