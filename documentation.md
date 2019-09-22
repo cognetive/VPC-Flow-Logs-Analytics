@@ -8,7 +8,7 @@ This model is implemented by a (potentially deep) neural network, which consists
 and a fully-connected layer. The convolution is performed in the temporal axis, relying on the existence of temporal patterns
 in the input.
 
-![alt text](images/structure.png)
+![alt text](images/structure.png | width="24" height="24")
 
 #### How to Use
 1. Use *shingle()* to create the data set and the labels set. Each data point consists of k-consequtive values of the time series,
