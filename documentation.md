@@ -16,7 +16,7 @@ in the input.
 #### How to Use
 
 1. Use *shingle()* to create the data set and the labels set. Each data point consists of k-consecutive values of the time series,
-and each label is the next value of the time series.  
+and each label is the next value of the corresponding data point.  
 2. Split each set into train and test sets, and feed the network.  
 3. Assign an anomaly score for each instance (the distance between the predicted and the real values, calculated by some metric).  
 4. Define the instances that received the highest scores as anomalous.
