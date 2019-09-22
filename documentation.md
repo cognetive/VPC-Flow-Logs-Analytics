@@ -7,7 +7,9 @@ the network tries to predict the next value. Anomalies can be defined as the val
 This model is implemented by a (potentially deep) neural network, which consists of 4 layers: Input, output, a convolution layer 
 and a fully-connected layer. The convolution is performed in the temporal axis, relying on the existence of temporal patterns
 in the input.
+
 ![alt text](images/structure.png)
+
 #### How to Use
 1. Use *shingle()* to create the data set and the labels set. Each data point consists of k-consequtive values of the time series,
 and each label is the next value of the time series.
