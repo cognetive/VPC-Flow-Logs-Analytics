@@ -1,7 +1,7 @@
 ## Machine Learning Module
 This module provides two models to detect anomalies in flow logs, both are based on neural networks.
 
-### Detect Anomalies with Fully Convolutional Network (FCN)
+### Fully Convolutional Network (FCN)
 Implemented in *cnn_regression()*. This network is designed to detect *contextual anomalies* in 1d time series. Given k-consequtive values of a time series, the network tries to predict the next value. Anomalies can be defined as the values which the network fails to predict.
 
 #### Structure
@@ -13,18 +13,23 @@ in the input.
   <img width="300" height="300" src="images/structure.png"
 </p> 
 
-#### How to Use
+#### How to Detect Anomalies?
 1. Use *shingle()* to create the data set and the labels set. Each data point consists of k-consecutive values of the time series,
 and each label is the next value of the corresponding data point.  
 2. Split each set into train and test sets, and feed the network.  
 3. Assign an anomaly score for each instance (the distance between the predicted and the real values, calculated by some metric).  
 4. Define the instances that received the highest scores as anomalous.
 
-### Detect Anomalies with Fully Connected Autoencoder (AE)
+### Fully Connected Autoencoder (AE)
 Implemented in *FC_autoencoder()*. This network is designed to detect *point anomalies* in multi dimensional signals. Given a k-dimension signal, the network learns to generate an efficient l-dimension encoding (l<k) which allows reconstructing the original signal with minimal error. Anomalies can be defined as the points which the network fails to reconstruct. 
 
 #### Structure
 This model is implemented by a neural network which contains one hidden layer (fully connected). The content of the hidden layer represents the encoding of the input. The input and output layers are of the same dimension. The network minimizes the error which is defined by the distance between the input and the output.
+
+#### How to Detect Anomalies? 
+1. Split the data into train and test sets and feed the network (labels are not required).  
+2. Assign an anomaly score for each instance (the distance between the reconstructed and the real values, calculated by some metric).  
+3. Define the instances that received the highest scores as anomalous.
 
 ### Advanced Features of Machine Learning Module
 Both FCN and AE are implemented in Tensorflow, providing the developer full control over the network structure. 
