@@ -1,8 +1,8 @@
 ## Machine Learning Module
 This module provides two models to detect anomalies in flow logs, both are based on neural networks.
+
 ### Detect Anomalies with Fully Convolutional Network (FCN)
-This network is designed to detect *contextual anomalies* in 1d time series. Given k-consequtive values of a time series,
-the network tries to predict the next value. Anomalies can be defined as the values which the network fails to predict.
+Implemented in *cnn_regression()*. This network is designed to detect *contextual anomalies* in 1d time series. Given k-consequtive values of a time series, the network tries to predict the next value. Anomalies can be defined as the values which the network fails to predict.
 
 #### Structure
 This model is implemented by a (potentially deep) neural network, which consists of 4 main layers: Input, output, a convolution layer 
@@ -14,12 +14,14 @@ in the input.
 </p> 
 
 #### How to Use
-
 1. Use *shingle()* to create the data set and the labels set. Each data point consists of k-consecutive values of the time series,
 and each label is the next value of the corresponding data point.  
 2. Split each set into train and test sets, and feed the network.  
 3. Assign an anomaly score for each instance (the distance between the predicted and the real values, calculated by some metric).  
 4. Define the instances that received the highest scores as anomalous.
+
+### Detect Anomalies with Fully Connected Autoencoder (AE)
+Implemented in *FC_autoencoder()*. This network is designed to detect *point anomalies* in multi dimensional signals. Given a k-dimension signal, the network learns to generate an efficient l-dimension encoding (l<k) which allows reconstructing the original signal with minimal error. Anomalies can be defined as the points which the network fails to reconstruct. 
 
 ### Advanced Features of Machine Learning Module
 Both FCN and AE are implemented in Tensorflow, providing the developer full control over the network structure. 
