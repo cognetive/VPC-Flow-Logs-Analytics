@@ -55,3 +55,9 @@ to resume from the point it stopped.
 * Overfitting Avoidance. This feature can be achieved by using one (or more) of the following mechanisms:
   1. Early Stopping - Stops the training phase when the test error increases in multiple consecutive epochs (the amount is defined by *tolerance*).
   2. Regularization - Limits the size of the network weights by adding a regularization term to the objective (defined by *reg_coeff*).
+  
+<br/>
+<br/>
+
+### Future Work
+
