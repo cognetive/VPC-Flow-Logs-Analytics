@@ -38,7 +38,7 @@ This model is implemented by a neural network which contains one hidden layer (f
 ### Advanced Features of Machine Learning Module
 Both FCN and AE are implemented in Tensorflow, providing the developer full control over the network structure. 
 Inspired by higher-level modules such as Keras, the following features are embedded in Analytics Machine Learning functions:
-* Continous Learning. Both models are designed to deal with continous tasks, in which the network might be trained multiple times
+* Continuous Learning. Both models are designed to deal with continous tasks, in which the network might be trained multiple times
 with different data sets. By passing *is_initial=False*, the previous Tensorflow graph is being resotred, allowing the training phase
 to resume from the point it stopped.
 * Overfitting Avoidance. This feature can be achieved by using one (or more) of the following mechanisms:
