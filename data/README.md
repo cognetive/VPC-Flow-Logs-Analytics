@@ -1,5 +1,6 @@
 ## Data Format
-Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data should be provided as a Pandas Dataframe named *flowlogs_df*, which contains (at least) the following fields (as columns):
+Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data should be provided as a Pandas Dataframe named *flowlogs_df*, which contains (at least) the following fields (as columns):  
+
 | Field | Description |
 | --- | --- |
 | Start | The start time of the flow |
@@ -14,5 +15,3 @@ Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data s
 | BAPackets | The number of packets from destination to source transferred during the flow |
 | ABBytes | The number of bytes from source to destination transferred during the flow |
 | BABytes | The number of bytes from destination to source transferred during the flow |
-
-Done
