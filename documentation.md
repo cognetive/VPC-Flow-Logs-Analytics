@@ -23,6 +23,9 @@ and each label is the next value of the corresponding data point.
 ### Detect Anomalies with Fully Connected Autoencoder (AE)
 Implemented in *FC_autoencoder()*. This network is designed to detect *point anomalies* in multi dimensional signals. Given a k-dimension signal, the network learns to generate an efficient l-dimension encoding (l<k) which allows reconstructing the original signal with minimal error. Anomalies can be defined as the points which the network fails to reconstruct. 
 
+#### Structure
+This model is implemented by a neural network which contains one hidden layer (fully connected). The content of the hidden layer represents the encoding of the input. The input and output layers are of the same dimension. The network minimizes the error which is defined by the distance between the input and the output.
+
 ### Advanced Features of Machine Learning Module
 Both FCN and AE are implemented in Tensorflow, providing the developer full control over the network structure. 
 Inspired by higher-level modules such as Keras, the following features are embedded in Analytics Machine Learning functions:
