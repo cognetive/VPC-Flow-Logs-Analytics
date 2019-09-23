@@ -8,7 +8,7 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 
 ## Notebooks List
 | Notebook | Action |
-| -------- | ----------- |
+| --- | --- |
 | alerts | Alerts on massive traffic to a single destination | 
 | anomalies_cnn | Detects anomalies in 1d time series using fully convolutional neural network |
 | anomalies_ae | Detects anomalies in multi dimensional signal using autoencoder |
