@@ -26,6 +26,10 @@ Implemented in *FC_autoencoder()*. This network is designed to detect *point ano
 #### Structure
 This model is implemented by a neural network which contains one hidden layer (fully connected). The content of the hidden layer represents the encoding of the input. The input and output layers are of the same dimension. The network minimizes the error which is defined by the distance between the input and the output.
 
+<p align="center">
+  <img width="350" height="250" src="images/ae.png"
+</p> 
+
 #### How to Detect Anomalies? 
 1. Split the data into train and test sets and feed the network (labels are not required).  
 2. Assign an anomaly score for each instance (the distance between the reconstructed and the real values, calculated by some metric).  
