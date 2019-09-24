@@ -2,7 +2,7 @@
 Analytics project provides a generic tool for analyzing Virtual Private Cloud (VPC) Flow Logs. 
 
 <p align="center">
-  <img width="750" height="500" src="images/top_talking.png"
+  <img width="700" height="400" src="images/top_talking.png"
 </p> 
 
 ## Why Use Analytics?
