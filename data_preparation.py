@@ -22,17 +22,23 @@ def download_file_cos(credentials, bucket, file):
     cos.download_file(Bucket=bucket, Key=file, Filename='tmp.csv')
     return pd.read_csv('tmp.csv')
 
+# Converts {Start, Last} columns to datetime type
+# Args: df - Flowlogs DataFrame.
+# Returns: Formatted DataFrame.
+def data_format(df):
+    return df.astype({'Start': 'datetime64[ms]', 'Last': 'datetime64[ms]'})
+
 
 # Extracts and resamples a flowlogs attribute.
-# Args: df - flowlogs dataframe. column - The attribute (column name) to be extracted. sample_rate - The sample rate.
+# Args: df - Flowlogs DataFrame. column - The attribute (column name) to be extracted. sample_rate - The sample rate.
 # Returns - A resampled dataframe consists of one column.
-def time_series_1d(df, column, sample_rate):
-    return df.set_index('Start')[[column]].resample(sample_rate).sum().fillna(0)
+def time_series(df, columns, sample_rate):
+    return df.set_index('Start')[columns].resample(sample_rate).sum().fillna(0)
 
 
 # Filters according to "Start" column and the given dates.
-# Args: df - Dataframe in flow_logs format. (year1, month1, day1) - Start date. (year2, month2, day2) - end date.
-# Retruns: A filtered dataframe.
+# Args: df - DataFrame in flow_logs format. (year1, month1, day1) - Start date. (year2, month2, day2) - end date.
+# Retruns: A filtered DataFrame.
 def date_filter(df, year1, month1, day1, year2, month2, day2):
     start_date = pd.to_datetime('%s-%s-%s' % (year1, month1, day1))
     end_date = pd.to_datetime('%s-%s-%s' % (year2, month2, day2))
@@ -40,9 +46,9 @@ def date_filter(df, year1, month1, day1, year2, month2, day2):
     return df.loc[mask]
 
 
-# Normalizes dataframe columns to range [0, 1] using min-max method.
-# Args: df - Dataframe.
-# Returns: Normalized dataframe.
+# Normalizes DataFrame columns to range [0, 1] using min-max method.
+# Args: df - DataFrame.
+# Returns: Normalized DataFrame.
 def normalize(df):
     normalized_df = df.copy()
     for c in normalized_df.columns:
@@ -50,9 +56,9 @@ def normalize(df):
     return normalized_df
 
 
-# Standardizes dataframe in a column-wise manner.
-# Args: df - Dataframe.
-# Returns: Standardized dataframe.
+# Standardizes DataFrame in a column-wise manner.
+# Args: df - DataFrame.
+# Returns: Standardized DataFrame.
 def standardize(df):
     standardized_df = df.copy()
     for c in standardized_df.columns:
@@ -60,9 +66,9 @@ def standardize(df):
     return standardized_df
 
 
-# Smoothes dataframe in a column-wise manner using moving average.
-# Args: df - Dataframe. w - Window size. s - Stride size.  
-# Retruns: Smoothed dataframe.
+# Smoothes DataFrame in a column-wise manner using moving average.
+# Args: df - DataFrame. w - Window size. s - Stride size.  
+# Retruns: Smoothed DataFrame.
 def smooth_MA(df, w, s=1):
     samples_num = int(len(df.index) / s) - w
     indices = [df.index[i*s+int(0.5*w)] for i in range(samples_num)]
@@ -72,9 +78,9 @@ def smooth_MA(df, w, s=1):
     return smoothed_df
 
 
-# Smoothes dataframe in a column-wise manner using low-pass filter.
-# Args: df - Dataframe. coeff - Amount of filter coefficients. thresh - The attenuation frequency. s - Stride size. 
-# Retruns: Smoothed dataframe.
+# Smoothes DataFrame in a column-wise manner using low-pass filter.
+# Args: df - DataFrame. coeff - Amount of filter coefficients. thresh - The attenuation frequency. s - Stride size. 
+# Retruns: Smoothed DataFrame.
 def smooth_LP(df, coeff=4, thresh=0.1, s=1):
     samples_num = int(len(df.index) / s)
     indices = [df.index[i*s] for i in range(samples_num)]
