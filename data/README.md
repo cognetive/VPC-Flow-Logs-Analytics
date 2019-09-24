@@ -1,5 +1,5 @@
 ## Data Format
-Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data should be provided as a Pandas Dataframe named *flowlogs_df*, which contains (at least) the following fields (as columns):  
+Analytics uses Pandas and assumes IBM format for VPC Flow Logs. Thus, the data should be provided as a Pandas DataFrame named *flowlogs_df*, which contains (at least) the following fields (as columns):  
 
 | Field | Description |
 | --- | --- |
