@@ -65,5 +65,5 @@ to resume from the point it stopped.
   * The shingle() function should be generalized
 * Using RNN, especially LSTM, to improve the prediction accuracy
 * Examine other unsupervised techniques to detect anomalies
-  * Clustering, for example, can be used solely or together with AE (by manipulating the target of the reconstruction to be the mean of a specific cluster)
+  * Clustering, for example, can be used solely or together with AE (by manipulating the target of the reconstruction to be the center of a specific cluster)
 
