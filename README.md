@@ -14,17 +14,17 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 | Notebook | Action |
 | --- | --- |
 | [alerts](analytics_notebooks/alerts.ipynb) | Alerts on massive traffic to a single destination | 
-| anomalies_ae | Detects anomalies in multi dimensional signal using autoencoder |
-| anomalies_cnn | Detects anomalies in 1d time series using fully convolutional neural network |
-| avg_packet | Plots a histogram of the average packet size distribution |
-| daily_traffic | Plots a graph of the daily traffic in the network |
-| hotspots | Detects network hotspots |
-| in_out | Compares inbound to outbound traffic of an instance |
-| port_distibution | Plots a chart of the distribution of the ports used in the network | 
-| rejection_rate | Displays the rejection rate of an instance |
-| tcp_flows | Compares one-way to two-way TCP connections |
-| top_countries | Displays a table of the top talking countries |
-| top_talking_pairs | Plots a graph of the top talking pairs |
+| [anomalies_ae](analytics_notebooks/anomalies_ae.ipynb) | Detects anomalies in multi dimensional signal using autoencoder |
+| [anomalies_cnn](analytics_notebooks/anomalies_cnn.ipynb) | Detects anomalies in 1d time series using fully convolutional neural network |
+| [avg_packet](analytics_notebooks/avg_packet.ipynb) | Plots a histogram of the average packet size distribution |
+| [daily_traffic](analytics_notebooks/daily_traffic.ipynb) | Plots a graph of the daily traffic in the network |
+| [hotspots](analytics_notebooks/hotspots.ipynb) | Detects network hotspots |
+| [in_out](analytics_notebooks/in_out.ipynb) | Compares inbound to outbound traffic of an instance |
+| [port_distibution](analytics_notebooks/port_distibution.ipynb) | Plots a chart of the distribution of the ports used in the network | 
+| [rejection_rate](analytics_notebooks/rejection_rate.ipynb) | Displays the rejection rate of an instance |
+| [tcp_flows](analytics_notebooks/tcp_flows.ipynb) | Compares one-way to two-way TCP connections |
+| [top_countries](analytics_notebooks/top_countries.ipynb) | Displays a table of the top talking countries |
+| [top_talking_pairs](analytics_notebooks/top_talking_pairs.ipynb) | Plots a graph of the top talking pairs |
 
 ## Prerequisites
 * IPython Notebook with Python 3
