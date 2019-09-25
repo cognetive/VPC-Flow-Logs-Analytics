@@ -15,7 +15,7 @@ Analytics project provides a generic tool for analyzing Virtual Private Cloud (V
 | --- | --- |
 | [alerts](analytics_notebooks/alerts.ipynb) | Alerts on massive traffic to a single destination | 
 | [anomalies_ae](analytics_notebooks/anomalies_ae.ipynb) | Detects anomalies in multi dimensional signal using autoencoder |
-| [anomalies_cnn](analytics_notebooks/anomalies_cnn.ipynb) | Detects anomalies in 1d time series using fully convolutional neural network |
+| [anomalies_cnn](analytics_notebooks/anomalies_cnn.ipynb) | Detects anomalies in 1d time series using fully convolutional network |
 | [avg_packet](analytics_notebooks/avg_packet.ipynb) | Plots a histogram of the average packet size distribution |
 | [daily_traffic](analytics_notebooks/daily_traffic.ipynb) | Plots a graph of the daily traffic in the network |
 | [hotspots](analytics_notebooks/hotspots.ipynb) | Detects network hotspots |
